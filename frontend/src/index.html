@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      name="description"
+      content="Perplex - AI-powered search with cited sources, threads, and follow-up questions."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Perplex - AI Search</title>
+    <script>
+      (function () {
+        var t = localStorage.getItem("perplex-theme");
+        if (t !== "light" && t !== "dark") t = "dark";
+        document.documentElement.classList.add(t);
+        document
+          .querySelector('meta[name="color-scheme"]')
+          .setAttribute("content", t);
+      })();
+    </script>
+    <script type="module" src="./frontend.tsx" async></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
