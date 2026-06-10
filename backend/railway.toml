@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+buildCommand = "bun install && bunx prisma generate"
+
+[deploy]
+startCommand = "bun index.ts"
